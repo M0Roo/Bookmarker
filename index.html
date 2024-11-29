@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+        rel="stylesheet">
+
+    <link rel="shortcut icon" href="image/hero.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Bookmarker</title>
+</head>
+
+<body>
+
+<div class="container d-flex flex-column align-items-center justify-content-center">
+    <head class="header ">
+        <h1 class="text-center my-5">Bookmarker</h1>
+    </head>
+
+    <div class="w-100 book-body p-3 py-4 d-flex flex-column justify-content-center align-items-center gap-4">
+        <h3 class="text-center my-3">
+            <i class="fa-solid fa-bookmark"></i>
+            Bookmark your favorite sites
+            <i class="fa-solid fa-bookmark"></i>
+        </h3>
+        <div class="w-100">
+
+            
+            <label for="name"class="my-2">
+                <i class="fa-solid fa-book-bookmark"></i>
+                Site Name</label>
+            <input oninput="validation(this)" class="form-control  mb-3" id="name" type="text" placeholder="Bookmarker Name">
+
+            <label for="url">
+                <i class="fa-solid fa-link"></i>
+                Site URL</label>
+            <input oninput="validation(this)" class="form-control  my-2" id="url" type="text" placeholder="Website URL">
+            
+            <button onclick="saveUrl()" type="submit" class="btn d-block mx-auto mt-4">Submit</button>
+        </div>
+    </div>
+
+    <table class="bg-white w-100 text-center my-3 table" id="table">
+        <thead>
+            <th class="p-2">Index</th>
+            <th class="p-2">Website Name</th>
+            <th class="p-2">Visit</th>
+            <th class="p-2">Delete</th>
+        </thead>
+        <tbody id="tbody">
+
+        </tbody>
+
+    </table>
+
+    
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

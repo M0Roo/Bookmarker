@@ -1,0 +1,73 @@
+:root{
+    --head-font: "Pacifico", cursive ;
+    --main-font: "PT Sans Caption", sans-serif;
+    --title-font:"Righteous", sans-serif;    
+}
+
+body{
+    background-color: #F7ECDE;
+    font-family: var(--main-font);
+    font-size: 16px;
+    font-weight: 600;
+}
+h1{
+    font-family: var(--head-font);
+    font-weight: 500;
+    font-size: 50px;
+    
+    position: relative;
+    &::after{
+        content: '';
+        position: absolute;
+        background-color: #FEC260;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 80%;
+        z-index: -999;
+        transition: all 0.5s;
+    }
+}
+h1:hover::after{
+    top: 40%;
+}
+p{
+    font-size: 18px;
+    font-weight: 400;
+    color: black;
+    text-align: start !important;
+}
+h2{
+    font-weight: 400 !important;
+    font-size: 21px !important;
+    text-align: start !important;
+    color: black !important;
+}
+
+h3{
+    font-family: var(--title-font);
+    font-size: 25px;
+    font-weight: 500;
+    background-image: linear-gradient(to right, #3ca55c, #b5ac49) ;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.book-body{
+    border-top: black 2px dotted;
+    border-bottom: black 2px dotted;
+
+
+    .btn{
+        padding:6px 48px;
+        background-color: #d1512d;
+        color: white;
+        font-weight: 400;
+        transition: all 0.5;
+        
+        &:hover{
+            background-color: #bb4120;;
+        }
+    }
+}
+
